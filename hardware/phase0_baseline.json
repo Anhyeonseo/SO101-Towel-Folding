@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "measured_at": null,
+  "operator": null,
+  "power": {
+    "left": {"rated_voltage_v": 12.0, "rated_current_a": 10.0, "no_load_v": null, "enabled_idle_v": null, "moving_min_v": null},
+    "right": {"rated_voltage_v": 12.0, "rated_current_a": 10.0, "no_load_v": null, "enabled_idle_v": null, "moving_min_v": null}
+  },
+  "arms": {
+    "left": {
+      "unexpected_motion_on_powerup": null,
+      "adapter_reconnect_ok": null,
+      "settings_persist_after_power_cycle": null,
+      "wrong_id_silent": null,
+      "servos": [
+        {"id": 1, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 2, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 3, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 4, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 5, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 6, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null}
+      ]
+    },
+    "right": {
+      "unexpected_motion_on_powerup": null,
+      "adapter_reconnect_ok": null,
+      "settings_persist_after_power_cycle": null,
+      "wrong_id_silent": null,
+      "servos": [
+        {"id": 1, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 2, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 3, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 4, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 5, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null},
+        {"id": 6, "joint_name": null, "ping_ok": null, "raw_increases_with_positive_joint": null, "raw_current": null, "raw_safe_min": null, "raw_safe_max": null, "feedback": {"position": null, "speed": null, "load": null, "voltage": null}, "abnormal_heat_or_noise": null, "communication_errors": null}
+      ]
+    }
+  },
+  "notes": []
+}
+

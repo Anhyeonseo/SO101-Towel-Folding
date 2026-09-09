@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-09-09",
+  "experiment_date": "2026-09-08",
+  "scope": "Archived R2 checkpoint; summary only, not a simulator checkpoint or a new physical validation.",
+  "r2_status": "incomplete_paused",
+  "source_index": {
+    "path": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/second_fold_native/latest_second_fold_result.json",
+    "sha256": "ee7c863d3b4f5ab4283e91baf328b310ac1d7bf7999984a45337afc900f3e0c9",
+    "availability": "local_archive"
+  },
+  "validated": {
+    "u_four_sheet_capture_validated": false,
+    "retention_validated": false,
+    "one_flip_completed": false,
+    "s1_to_s2_end_to_end_validated": false,
+    "sim_to_real_validated": false
+  },
+  "archived_verification": {
+    "source": {
+      "path": "artifacts/bimanual/planning/r2_contact_foundation_20260908/handoff_verification.json",
+      "sha256": "102a9bcbcc525df95d94bdfa49b4eb0d49c71ae219b13dc32d24c648866942b7",
+      "availability": "local_archive"
+    },
+    "related_tests_passed": 43,
+    "physical_motor_commands": 0,
+    "protected_files_count": 16,
+    "protected_hashes_rechecked_on": "2026-09-09"
+  },
+  "trials": [
+    {
+      "trial": "position_one_way",
+      "outcome": "diagnostic_completed_g1_not_passed",
+      "source": {
+        "path": "artifacts/bimanual/planning/r2_contact_foundation_20260908/position_one_way/result.json",
+        "sha256": "61150efdc54cec459a81f383d60e0d700df4ef486800c49ebbe5dd4f3364c61d",
+        "availability": "local_archive"
+      },
+      "drive_mode": "position",
+      "coupling_mode": "one_way",
+      "g1_passed": false,
+      "motion_commands": 0
+    },
+    {
+      "trial": "position_two_way",
+      "outcome": "stopped_tracking_error",
+      "source": {
+        "path": "artifacts/bimanual/planning/r2_contact_foundation_20260908/position_two_way/result.json",
+        "sha256": "3a55422d3e1540a77183cee160586f22cb4c510e8bb2c1ac72bbd5e617076323",
+        "availability": "local_archive"
+      },
+      "drive_mode": "position",
+      "coupling_mode": "two_way",
+      "g1_passed": false,
+      "motion_commands": 0
+    },
+    {
+      "trial": "bounded_press",
+      "outcome": "stopped_without_sustained_jaw_response",
+      "source": {
+        "path": "artifacts/bimanual/planning/r2_contact_foundation_20260908/bounded_press/result.json",
+        "sha256": "b09d5fc16fdc6208ff8f14632a0247dbe337433bc8ade3cf2633d9c698430bf7",
+        "availability": "local_archive"
+      },
+      "drive_mode": "position",
+      "coupling_mode": "two_way",
+      "g1_passed": false,
+      "motion_commands": 0
+    },
+    {
+      "trial": "bounded_press_tracking",
+      "outcome": "stopped_time_budget",
+      "source": {
+        "path": "artifacts/bimanual/planning/r2_contact_foundation_20260908/bounded_press_tracking/result.json",
+        "sha256": "cce3ad148bd4b99e30b9b9fad8a6c486f7e030d189725b695b421149b1510fa1",
+        "availability": "local_archive"
+      },
+      "drive_mode": "position",
+      "coupling_mode": "two_way",
+      "g1_passed": false,
+      "motion_commands": 0
+    },
+    {
+      "trial": "local_primitive",
+      "outcome": "interrupted",
+      "source": {
+        "path": "artifacts/bimanual/planning/r2_contact_foundation_20260908/local_primitive/result.json",
+        "sha256": "238b3a13283d5900a485b97279f5636e6d1ee00590b11ed470182371a1c5639c",
+        "availability": "local_archive"
+      },
+      "drive_mode": "position",
+      "coupling_mode": "two_way",
+      "g1_passed": false,
+      "motion_commands": 0,
+      "last_persisted_stage": "initialized",
+      "final_state_or_recording_flushed": false,
+      "local_primitive_diagnostic_completed": false
+    }
+  ],
+  "s1_recipe_source": {
+    "path": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/validated_native_recipe.json",
+    "sha256": "a3bc8b1f569c5f0305b406f614edf88ced2f8454c4de3112aaf4a40b51483594",
+    "availability": "local_archive"
+  },
+  "protected_inputs_and_result": [
+    {
+      "path": "tools/setup/isaac/run_towel_s1_vertex_patch_lift.py",
+      "sha256": "f898766d1758015013e5b7273aa6c5e86c80a35b864499a42316f7ec0281c3fe",
+      "availability": "repository"
+    },
+    {
+      "path": "tools/lib/so101_mesh_pinch.py",
+      "sha256": "4a98facaf71ec9f0db9099964b501d561040b9020bd3c01cc4a076493e2d84b5",
+      "availability": "repository"
+    },
+    {
+      "path": "tools/lib/simulation_rendering.py",
+      "sha256": "c142794d2a67403ed8e544f240125ce921aafbd578b97d522cc7ee7f1f15589b",
+      "availability": "repository"
+    },
+    {
+      "path": "tools/lib/so101_contact_readback.py",
+      "sha256": "1f4a193d1adc09884a871036a19755d18782a908f5e68e6cd4a2b4a0d7137dc6",
+      "availability": "repository"
+    },
+    {
+      "path": "config/towel_isaac_s1_material.json",
+      "sha256": "c1deb5f6f27794623c89d01d422ea29e0f872d8e20f9ff528c7d950e14f66f12",
+      "availability": "repository"
+    },
+    {
+      "path": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/centered_approach_replay.json",
+      "sha256": "ab5c198112483caa6c1dafd958b38f43d9cece5702d811c2162fca841febd92a",
+      "availability": "local_archive"
+    },
+    {
+      "path": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/native_span_fold_replay.json",
+      "sha256": "bb1710ed5a76a29f210316bef16e634942d83634cd6baff9230833a71dcc1bd2",
+      "availability": "local_archive"
+    },
+    {
+      "path": "external_inputs/towel_isaac_s0_manifest_integrated_20260828.json",
+      "sha256": "343092fe9fc0d2c2ed7e6f6cf955053b93cfdf9fb92215c51c9f8838d2eaec47",
+      "availability": "local_archive"
+    },
+    {
+      "path": "external_inputs/towel_newton_meter_cantilever_r63_iter20_ke1p55_kd0p02_contact300k_gpu_20260904.json",
+      "sha256": "aee65253114f000f3e2e3ce54d63740132eb290412e0c8321f0f56c4a1ff2277",
+      "availability": "local_archive"
+    },
+    {
+      "path": "external_inputs/towel_newton_meter_edge_release_r63_iter20_ke1p55_kd0p02_contact300k_gpu_20260904.json",
+      "sha256": "05afcfaa10f5fcb325f53e65cbc4f75e51a0bac00ce0cc405eef763e8e3b14ef",
+      "availability": "local_archive"
+    },
+    {
+      "path": "artifacts/bimanual/preview/so101_dual_preview_right_registered_r0g_newton_baked_scale.urdf",
+      "sha256": "6ba59c0e909a259a0046a8961c9e726787d38cebe008e3975e44f9cf4d7209dc",
+      "availability": "repository"
+    },
+    {
+      "path": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/geometry.json",
+      "sha256": "8754a6d4f38e56bc4e7817ff18c88f584c4692bbcc488d85488e775294d42772",
+      "availability": "local_archive"
+    },
+    {
+      "path": "tools/lib/so101_towel_edge_alignment.py",
+      "sha256": "6ddd75a1b406cce8dcadf56eeeffb21067871ea88610c37dc9e33c4ef5fb9a9e",
+      "availability": "repository"
+    },
+    {
+      "path": "tools/lib/so101_surface_matched_pad.py",
+      "sha256": "f8db739af5e3efe8df8f949ce924cb148258c93b75877534159cbce6d4c9684d",
+      "availability": "repository"
+    },
+    {
+      "path": "tools/lib/towel_motion_timing.py",
+      "sha256": "b684e4a9bd42c690f702f2781aa7e8ff81d40244e8c73784749a6e273c044235",
+      "availability": "repository"
+    },
+    {
+      "path": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/live_speed_restore/fine_compact/result.json",
+      "sha256": "2cbde94a9337902b312cb108bafbd322b379ae15257a36e09ef48c2f8331e7ad",
+      "availability": "local_archive"
+    }
+  ],
+  "reproducibility": {
+    "clone_only_end_to_end_replay_available": false,
+    "missing_package": "Local plans, recordings and external calibration inputs are not included.",
+    "original_records_modified": false
+  }
+}

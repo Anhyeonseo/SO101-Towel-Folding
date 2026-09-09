@@ -1,0 +1,9 @@
+# Local contract/unit tests and calibration utilities.
+numpy>=1.26,<3
+opencv-python-headless==4.10.0.84
+scipy>=1.11,<2
+PyYAML>=6,<7
+pytest>=8,<9
+jsonschema>=4.23,<5
+pyserial==3.5
+urdf-parser-py>=0.0.4,<0.1
