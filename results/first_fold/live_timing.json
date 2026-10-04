@@ -1,0 +1,15 @@
+{
+  "steps": 3375,
+  "renders": 1705,
+  "step_s": 110.8209374086,
+  "render_s": 108.33096770261182,
+  "contact_s": 8.246213397505926,
+  "contact_calls": 2285,
+  "wall_s": 234.2751889579813,
+  "simulation_s": 14.0625,
+  "viewport_frames_per_wall_second": 7.277765979332119,
+  "simulation_to_wall_ratio": 0.060025562512819895,
+  "window_viewport_fps": 6.131641057536802,
+  "window_simulation_to_wall_ratio": 0.050684936161090495,
+  "scope": "Wall timings include GPU synchronization at existing call sites; categories can overlap."
+}

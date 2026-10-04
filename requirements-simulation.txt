@@ -1,0 +1,7 @@
+# Install into an existing Isaac Sim / Isaac Lab Python environment.
+# Isaac Lab, Newton, Warp and Torch are supplied by that environment.
+numpy==2.3.1
+scipy==1.17.0
+PyYAML==6.0.3
+trimesh==4.11.1
+urdf-parser-py==0.0.4

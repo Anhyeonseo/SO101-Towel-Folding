@@ -1,0 +1,22 @@
+{
+  "left": {
+    "actual_approach_tilt_deg": 0.50340632072319,
+    "post_lift_contact_particles": [
+      3716
+    ],
+    "side_edge_inset_m": [
+      0.023809523809523808
+    ],
+    "initial_lift_contact_passed": true
+  },
+  "right": {
+    "actual_approach_tilt_deg": 1.884623925160134,
+    "post_lift_contact_particles": [
+      324
+    ],
+    "side_edge_inset_m": [
+      0.023809523809523808
+    ],
+    "initial_lift_contact_passed": true
+  }
+}

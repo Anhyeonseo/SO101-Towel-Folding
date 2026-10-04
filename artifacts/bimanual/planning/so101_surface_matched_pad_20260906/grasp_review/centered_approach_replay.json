@@ -1,0 +1,364 @@
+{
+  "record_kind": "towel_mesh_contact_approach_fk_diagnostic",
+  "status": "TOWEL_MESH_CONTACT_APPROACH_FK_DIAGNOSTIC_PASS",
+  "motion_authorized": false,
+  "towel_placement": {
+    "bounds_xyxy_m": [
+      0.15907949571699415,
+      0.45907949571699413,
+      -0.27131763166189193,
+      0.028682368338108055
+    ]
+  },
+  "selected_candidate": {
+    "first_fold": [
+      {
+        "name": "first_contact",
+        "clear_pose": false,
+        "clear_arm": null,
+        "reuse_target_of": null,
+        "reverse_of": null,
+        "path_cache_key": null,
+        "attachment_event": "attach_two_single_layer_edge_patches_after_dual_contact_gate",
+        "targets": [
+          {
+            "name": "first_contact_left",
+            "arm": "left",
+            "xyz_m": [
+              0.17035879283769215,
+              0.005226546530872204,
+              0.0017685448112773755
+            ],
+            "jaw_yaw_rad": -0.05911014411221599,
+            "semantic": "contact",
+            "layer": "one_layer",
+            "maximum_approach_tilt_rad": 0.20943951023931956,
+            "maximum_finger_tilt_rad": 0.20943951023931956,
+            "enforce_finger_yaw": true,
+            "fixed_pad_normal_yaw_rad": null,
+            "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+          },
+          {
+            "name": "first_contact_right",
+            "arm": "right",
+            "xyz_m": [
+              0.1703376625047709,
+              -0.24745141718036492,
+              0.0017621925199022455
+            ],
+            "jaw_yaw_rad": 0.038811306426746524,
+            "semantic": "contact",
+            "layer": "one_layer",
+            "maximum_approach_tilt_rad": 0.20943951023931956,
+            "maximum_finger_tilt_rad": 0.20943951023931956,
+            "enforce_finger_yaw": true,
+            "fixed_pad_normal_yaw_rad": null,
+            "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+          }
+        ],
+        "arm_joint_positions_rad": {
+          "left": [
+            -0.03695178191926679,
+            1.2667152758212044,
+            0.060671341631054955,
+            0.1663794529206243,
+            -1.6181809132034328
+          ],
+          "right": [
+            0.030575712254865203,
+            1.3153699928936935,
+            0.06567599130239592,
+            0.11096747748611356,
+            -1.3874387008028504
+          ]
+        },
+        "joint_positions_rad": [
+          -0.03695178191926679,
+          1.2667152758212044,
+          0.060671341631054955,
+          0.1663794529206243,
+          -1.6181809132034328,
+          0.254641,
+          0.030575712254865203,
+          1.3153699928936935,
+          0.06567599130239592,
+          0.11096747748611356,
+          -1.3874387008028504,
+          0.151864
+        ],
+        "moveit_segment_planned": false,
+        "transition_collision_checked": false,
+        "approach_open_model_rad": 0.12,
+        "mesh_lift_probe_arm_positions_rad": {
+          "left": [
+            -0.03695197199470434,
+            1.2156131522976925,
+            0.09888681143169793,
+            0.07706185959716666,
+            -1.618181103271556
+          ],
+          "right": [
+            0.03264720706489046,
+            1.269206091508061,
+            0.10596699281131457,
+            0.024512520815245225,
+            -1.385367634451005
+          ]
+        }
+      },
+      {
+        "name": "first_suspend_lift_01",
+        "clear_pose": false,
+        "clear_arm": null,
+        "reuse_target_of": null,
+        "reverse_of": null,
+        "path_cache_key": null,
+        "attachment_event": "attach_two_single_layer_edge_patches_after_dual_contact_gate",
+        "targets": [
+          {
+            "name": "first_contact_left",
+            "arm": "left",
+            "xyz_m": [
+              0.17035879283769517,
+              0.005226546530790167,
+              0.026768544811277342
+            ],
+            "jaw_yaw_rad": -0.05911014411416407,
+            "semantic": "contact",
+            "layer": "one_layer",
+            "maximum_approach_tilt_rad": 0.20943951023931956,
+            "maximum_finger_tilt_rad": 0.20943951023931956,
+            "enforce_finger_yaw": true,
+            "fixed_pad_normal_yaw_rad": null,
+            "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+          },
+          {
+            "name": "first_contact_right",
+            "arm": "right",
+            "xyz_m": [
+              0.17033766297040565,
+              -0.2474514126047372,
+              0.02676219238141471
+            ],
+            "jaw_yaw_rad": 0.03881094230265512,
+            "semantic": "contact",
+            "layer": "one_layer",
+            "maximum_approach_tilt_rad": 0.20943951023931956,
+            "maximum_finger_tilt_rad": 0.20943951023931956,
+            "enforce_finger_yaw": true,
+            "fixed_pad_normal_yaw_rad": null,
+            "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+          }
+        ],
+        "arm_joint_positions_rad": {
+          "left": [
+            -0.036952257107855616,
+            1.1563338417179767,
+            0.16826649054057485,
+            -0.05159713009038092,
+            -1.6181813883737357
+          ],
+          "right": [
+            0.035758482220312034,
+            1.2162755801696663,
+            0.17807597040952597,
+            -0.1005272224167933,
+            -1.3822570027672392
+          ]
+        },
+        "joint_positions_rad": [
+          -0.036952257107855616,
+          1.1563338417179767,
+          0.16826649054057485,
+          -0.05159713009038092,
+          -1.6181813883737357,
+          0.254641,
+          0.035758482220312034,
+          1.2162755801696663,
+          0.17807597040952597,
+          -0.1005272224167933,
+          -1.3822570027672392,
+          0.151864
+        ],
+        "moveit_segment_planned": false,
+        "transition_collision_checked": false
+      }
+    ]
+  },
+  "phases": [
+    {
+      "name": "first_contact",
+      "clear_pose": false,
+      "clear_arm": null,
+      "reuse_target_of": null,
+      "reverse_of": null,
+      "path_cache_key": null,
+      "attachment_event": "attach_two_single_layer_edge_patches_after_dual_contact_gate",
+      "targets": [
+        {
+          "name": "first_contact_left",
+          "arm": "left",
+          "xyz_m": [
+            0.17035879283769215,
+            0.005226546530872204,
+            0.0017685448112773755
+          ],
+          "jaw_yaw_rad": -0.05911014411221599,
+          "semantic": "contact",
+          "layer": "one_layer",
+          "maximum_approach_tilt_rad": 0.20943951023931956,
+          "maximum_finger_tilt_rad": 0.20943951023931956,
+          "enforce_finger_yaw": true,
+          "fixed_pad_normal_yaw_rad": null,
+          "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+        },
+        {
+          "name": "first_contact_right",
+          "arm": "right",
+          "xyz_m": [
+            0.1703376625047709,
+            -0.24745141718036492,
+            0.0017621925199022455
+          ],
+          "jaw_yaw_rad": 0.038811306426746524,
+          "semantic": "contact",
+          "layer": "one_layer",
+          "maximum_approach_tilt_rad": 0.20943951023931956,
+          "maximum_finger_tilt_rad": 0.20943951023931956,
+          "enforce_finger_yaw": true,
+          "fixed_pad_normal_yaw_rad": null,
+          "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+        }
+      ],
+      "arm_joint_positions_rad": {
+        "left": [
+          -0.03695178191926679,
+          1.2667152758212044,
+          0.060671341631054955,
+          0.1663794529206243,
+          -1.6181809132034328
+        ],
+        "right": [
+          0.030575712254865203,
+          1.3153699928936935,
+          0.06567599130239592,
+          0.11096747748611356,
+          -1.3874387008028504
+        ]
+      },
+      "joint_positions_rad": [
+        -0.03695178191926679,
+        1.2667152758212044,
+        0.060671341631054955,
+        0.1663794529206243,
+        -1.6181809132034328,
+        0.254641,
+        0.030575712254865203,
+        1.3153699928936935,
+        0.06567599130239592,
+        0.11096747748611356,
+        -1.3874387008028504,
+        0.151864
+      ],
+      "moveit_segment_planned": false,
+      "transition_collision_checked": false,
+      "approach_open_model_rad": 0.12,
+      "mesh_lift_probe_arm_positions_rad": {
+        "left": [
+          -0.03695197199470434,
+          1.2156131522976925,
+          0.09888681143169793,
+          0.07706185959716666,
+          -1.618181103271556
+        ],
+        "right": [
+          0.03264720706489046,
+          1.269206091508061,
+          0.10596699281131457,
+          0.024512520815245225,
+          -1.385367634451005
+        ]
+      }
+    },
+    {
+      "name": "first_suspend_lift_01",
+      "clear_pose": false,
+      "clear_arm": null,
+      "reuse_target_of": null,
+      "reverse_of": null,
+      "path_cache_key": null,
+      "attachment_event": "attach_two_single_layer_edge_patches_after_dual_contact_gate",
+      "targets": [
+        {
+          "name": "first_contact_left",
+          "arm": "left",
+          "xyz_m": [
+            0.17035879283769517,
+            0.005226546530790167,
+            0.026768544811277342
+          ],
+          "jaw_yaw_rad": -0.05911014411416407,
+          "semantic": "contact",
+          "layer": "one_layer",
+          "maximum_approach_tilt_rad": 0.20943951023931956,
+          "maximum_finger_tilt_rad": 0.20943951023931956,
+          "enforce_finger_yaw": true,
+          "fixed_pad_normal_yaw_rad": null,
+          "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+        },
+        {
+          "name": "first_contact_right",
+          "arm": "right",
+          "xyz_m": [
+            0.17033766297040565,
+            -0.2474514126047372,
+            0.02676219238141471
+          ],
+          "jaw_yaw_rad": 0.03881094230265512,
+          "semantic": "contact",
+          "layer": "one_layer",
+          "maximum_approach_tilt_rad": 0.20943951023931956,
+          "maximum_finger_tilt_rad": 0.20943951023931956,
+          "enforce_finger_yaw": true,
+          "fixed_pad_normal_yaw_rad": null,
+          "maximum_fixed_pad_normal_tilt_rad": 0.20943951023931956
+        }
+      ],
+      "arm_joint_positions_rad": {
+        "left": [
+          -0.036952257107855616,
+          1.1563338417179767,
+          0.16826649054057485,
+          -0.05159713009038092,
+          -1.6181813883737357
+        ],
+        "right": [
+          0.035758482220312034,
+          1.2162755801696663,
+          0.17807597040952597,
+          -0.1005272224167933,
+          -1.3822570027672392
+        ]
+      },
+      "joint_positions_rad": [
+        -0.036952257107855616,
+        1.1563338417179767,
+        0.16826649054057485,
+        -0.05159713009038092,
+        -1.6181813883737357,
+        0.254641,
+        0.035758482220312034,
+        1.2162755801696663,
+        0.17807597040952597,
+        -0.1005272224167933,
+        -1.3822570027672392,
+        0.151864
+      ],
+      "moveit_segment_planned": false,
+      "transition_collision_checked": false
+    }
+  ],
+  "scope": "Static STL support-plane and sampled local approach/lift checks, not inter-arm/self/cloth collision or force validation.",
+  "surface_matched_pad_sha256": "8754a6d4f38e56bc4e7817ff18c88f584c4692bbcc488d85488e775294d42772",
+  "preflight": "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/centered_approach_preflight.json"
+}

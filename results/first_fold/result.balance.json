@@ -1,0 +1,11 @@
+{
+  "status": "SKIPPED_ALREADY_ACCEPTED_HALF_FOLD",
+  "maximum_layer_fraction": 0.5080237425427598,
+  "main_fold_column": 32,
+  "p95_xy_m": 0.007381241302937269,
+  "width_m": 0.16172263026237488,
+  "height_m": 0.025504627376794813,
+  "table_supported_particle_fraction": 0.428466796875,
+  "final_limits_unchanged": true,
+  "final_release_validation_still_required": true
+}

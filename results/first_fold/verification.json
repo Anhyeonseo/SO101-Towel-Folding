@@ -1,0 +1,96 @@
+{
+  "status": "NATIVE_CONTACT_FIRST_FOLD_SIMULATION_VERIFIED",
+  "simulation_only": true,
+  "simulation_first_fold_completed": true,
+  "motion_commands": 0,
+  "successful_full_runs": 1,
+  "repeatability_verified": false,
+  "grasp_evidence": {
+    "left": {
+      "actual_approach_tilt_deg": 0.50340632072319,
+      "post_lift_contact_particles": [
+        3716
+      ],
+      "side_edge_inset_m": [
+        0.023809523809523808
+      ],
+      "initial_lift_contact_passed": true
+    },
+    "right": {
+      "actual_approach_tilt_deg": 1.884623925160134,
+      "post_lift_contact_particles": [
+        324
+      ],
+      "side_edge_inset_m": [
+        0.023809523809523808
+      ],
+      "initial_lift_contact_passed": true
+    }
+  },
+  "checks": {
+    "vertical_interior_grasp": true,
+    "full_result_written": true,
+    "no_robot_motion_commands": true,
+    "no_cloth_attachment": true,
+    "native_contact_monitor": true,
+    "carry_completed_before_release": true,
+    "finite_final_cloth": true,
+    "shape_gate": true,
+    "strict_alignment_gate": true,
+    "half_fold_gate": true,
+    "release_separation": true,
+    "release_not_following_jaws": true,
+    "open_jaw_tracking": true,
+    "native_mode_executed": true
+  },
+  "metrics": {
+    "maximum_layer_fraction": 0.507924972891558,
+    "main_fold_column": 32,
+    "maximum_p95_paired_xy_error_m": 0.0035336012952029705,
+    "maximum_footprint_width_m": 0.16182291507720947,
+    "maximum_height_m": 0.024833522737026215,
+    "terminal_curl_amplitude_m": 0.0,
+    "maximum_release_patch_lift_m": 7.074559107422829e-07,
+    "minimum_release_patch_to_jaw_distance_m": 0.08343076705932617
+  },
+  "contact_monitor": {
+    "carry_monitor_end": "aligned_accepted_table_supported_fold_before_opening",
+    "checks": 2207,
+    "cloth_nodes_constrained": false,
+    "completed_carry_to_supported_fold": true,
+    "jaw_maintenance": {
+      "current_model_rad": [
+        0.03102462738752365,
+        0.031151525676250458
+      ],
+      "force_calibrated": false,
+      "initial_model_rad": [
+        0.07102462649345398,
+        0.03523492440581322
+      ],
+      "maximum_closing_rate_rad_s": 0.02,
+      "maximum_gap_reduction_m": 0.0035,
+      "minimum_model_rad": {
+        "left": 0.03102462649345398,
+        "right": 0.006979902433031099
+      },
+      "target_contact_depth_m": 0.0012
+    },
+    "maximum_consecutive_contact_loss_steps": {
+      "left": 0,
+      "right": 0
+    },
+    "maximum_contact_loss_s": 0.02,
+    "minimum_inward_normal_component": 0.9894543886184692,
+    "table_supported_particle_fraction_at_release": 0.428466796875
+  },
+  "elapsed_s": 361.4950221829931,
+  "source_status": "S1_ISAACLAB_NOMINAL_HALF_FOLD_ACCEPTED_WITHIN_55_45_HIGH_CURVATURE_MATERIAL_NOT_PHYSICALLY_CALIBRATED",
+  "result_path": "results/first_fold/result.json",
+  "result_sha256": "40a859773ef41f20eae0b72d1a163930933a632169232a81a7c3c6ec8fc30822",
+  "limits": [
+    "High-curvature softening and jaw friction/force are not physically calibrated.",
+    "The existing broad S1 physical completion flag remains false; this verifies the nominal simulation sequence.",
+    "Single full run; success rate across repeats/material variation not measured."
+  ]
+}

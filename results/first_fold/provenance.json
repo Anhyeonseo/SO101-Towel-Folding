@@ -1,0 +1,34 @@
+{
+  "source_commit": "5b16fff82e400e4cca8cdcff96a6d1548058ef80",
+  "run": "fine_compact",
+  "original_sha256": {
+    "tools/setup/isaac/run_towel_s1_vertex_patch_lift.py": "f898766d1758015013e5b7273aa6c5e86c80a35b864499a42316f7ec0281c3fe",
+    "tools/lib/so101_mesh_pinch.py": "4a98facaf71ec9f0db9099964b501d561040b9020bd3c01cc4a076493e2d84b5",
+    "tools/lib/simulation_rendering.py": "c142794d2a67403ed8e544f240125ce921aafbd578b97d522cc7ee7f1f15589b",
+    "tools/lib/so101_contact_readback.py": "1f4a193d1adc09884a871036a19755d18782a908f5e68e6cd4a2b4a0d7137dc6",
+    "config/towel_isaac_s1_material.json": "c1deb5f6f27794623c89d01d422ea29e0f872d8e20f9ff528c7d950e14f66f12",
+    "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/centered_approach_replay.json": "ab5c198112483caa6c1dafd958b38f43d9cece5702d811c2162fca841febd92a",
+    "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/native_span_fold_replay.json": "bb1710ed5a76a29f210316bef16e634942d83634cd6baff9230833a71dcc1bd2",
+    "config/first_fold_scene.json": "343092fe9fc0d2c2ed7e6f6cf955053b93cfdf9fb92215c51c9f8838d2eaec47",
+    "config/towel_newton_meter_cantilever_r63_iter20_ke1p55_kd0p02_contact300k_gpu_20260904.json": "aee65253114f000f3e2e3ce54d63740132eb290412e0c8321f0f56c4a1ff2277",
+    "config/towel_newton_meter_edge_release_r63_iter20_ke1p55_kd0p02_contact300k_gpu_20260904.json": "05afcfaa10f5fcb325f53e65cbc4f75e51a0bac00ce0cc405eef763e8e3b14ef",
+    "artifacts/bimanual/preview/so101_dual_preview_right_registered_r0g_newton_baked_scale.urdf": "6ba59c0e909a259a0046a8961c9e726787d38cebe008e3975e44f9cf4d7209dc",
+    "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/geometry.json": "8754a6d4f38e56bc4e7817ff18c88f584c4692bbcc488d85488e775294d42772",
+    "tools/lib/so101_towel_edge_alignment.py": "6ddd75a1b406cce8dcadf56eeeffb21067871ea88610c37dc9e33c4ef5fb9a9e",
+    "tools/lib/so101_surface_matched_pad.py": "f8db739af5e3efe8df8f949ce924cb148258c93b75877534159cbce6d4c9684d",
+    "tools/lib/towel_motion_timing.py": "b684e4a9bd42c690f702f2781aa7e8ff81d40244e8c73784749a6e273c044235",
+    "results/first_fold/result.json": "2cbde94a9337902b312cb108bafbd322b379ae15257a36e09ef48c2f8331e7ad"
+  },
+  "packaging_changes": [
+    "Machine-specific paths rewritten to repository-relative paths.",
+    "Worktable dimensions retained; physical camera homography replaced by a geometry-only identity file.",
+    "Evidence paths relocated; original hashes retained here.",
+    "Physics runner and imported simulation helpers retained byte-for-byte."
+  ],
+  "path_rewritten_files": [
+    "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/centered_approach_replay.json",
+    "artifacts/bimanual/planning/so101_surface_matched_pad_20260906/grasp_review/native_span_fold_replay.json",
+    "results/first_fold/verification.json",
+    "results/first_fold/result.json"
+  ]
+}

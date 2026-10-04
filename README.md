@@ -1,84 +1,50 @@
 # SO101 Towel Folding
 
-> **Frozen development snapshot — 2026-09-09.** This repository preserves the towel-folding work at the R2 checkpoint. Physical grasp validation, continuous two-fold execution, and sim-to-real transfer remain incomplete. Ongoing project development continues in [Bimanual-Household-Manipulation](https://github.com/Anhyeonseo/Bimanual-Household-Manipulation).
+Isaac Sim과 Newton에서 두 대의 SO-101로 수건을 집고, 들어 올려 반으로 접은 뒤 내려놓는 시뮬레이션이다. 마지막으로 전체 동작과 놓기 검사를 통과한 `fine_compact` 1차 접기 버전을 보존한다.
 
-SO-ARM101 두 대와 상단·손목 카메라로 수건을 펼치고 직교 방향으로 두 번 접는 심투리얼 프로젝트다. Raspberry Pi 5의 ROS 2 Jazzy와 STM32G474 기반 제어기를 사용한다.
+![저장된 1차 접기 결과](docs/first_fold_result.png)
 
-**현재 R2 진행 중이며 실험은 일시 중단 상태다.** 작업셀·통신·영상 관측 기반과 1차 접기 시뮬레이션 비교 결과를 확보했다. 실물과 대응되는 집기·접촉, 연속 두 번 접기와 실물 전이는 아직 검증되지 않았다. [현재 진행 상황](docs/CURRENT_STATUS.md)에서 구현 범위와 남은 문제를 확인할 수 있다.
+## 동작과 결과
 
-## 목표 동작
+위에서 수건 안쪽을 양손으로 집고 → 들어 올리고 → 접는 경로를 따라 이동하고 → 재료 끝선 정렬을 보정하고 → 작업대에 내려놓고 → 그리퍼를 열어 물러난다.
 
-```text
-카메라 관측 → 펼치기 → 평탄화·정렬 → 1차 접기
-           → 중간 관측·보정 → 직교 2차 접기 → 최종 검사
-```
+| 항목 | 보존 결과 |
+| --- | --- |
+| 수건 | 300 × 300 mm, 63 × 63 요소 / 4,096 노드 |
+| 그리퍼 | 고정 턱 면에 맞춘 2.2 mm 패드 |
+| 접힌 두 부분의 길이 비율 | 50.8 : 49.2 |
+| 대응 노드 XY 오차, p95 | 3.53 mm |
+| 접힌 폭 | 161.82 mm |
+| 놓기 완료 시 접촉 패치–턱 최소 거리 | 83.43 mm |
+| 보존된 전체 성공 실행 | 1회 |
 
-대상은 작업대 안의 수건 한 장으로, 명목 크기는 300×300 mm다. 각 조작 후 손을 치우고 다시 관측하며, 가림·미끄러짐·형상 오류에는 횟수와 시간이 제한된 복구를 적용한다. 여러 장의 얽힘, 매듭, 다른 물체 아래에 낀 수건은 초기 범위에서 제외한다.
+입자 고정이나 수건 부착 없이 접촉으로 수행한 **명목 조건의 시뮬레이션 결과**다. 로봇 관절은 지정 상태로 구동하며 Newton 결합은 단방향이다. 높은 곡률에서의 수건 연화와 패드 마찰·압착력은 실물에 맞춰 검증되지 않았다. 2차 접기와 반복 성공률은 이 버전의 완료 범위에 포함하지 않는다.
 
-최종 목표는 시뮬레이션의 관측·행동 계약과 학습 정책을 실제 로봇으로 옮겨 검증하는 것이다. [수건 조작 설계](docs/TOWEL_FOLDING.md)에 대상 범위와 최종 품질 기준을 정리했다.
+## 확인과 실행
 
-## 하드웨어와 소프트웨어
-
-| 구성 | 역할 |
-|---|---|
-| SO-ARM101 양팔, 2.2 mm 패드 | 집기·펼치기·접기 |
-| 상단 카메라 1개, 손목 카메라 2개 | 수건 형상과 접근 영역 관측 |
-| Raspberry Pi 5 / ROS 2 Jazzy | 카메라 수집, 인식, 계획, 실행 관리 |
-| STM32G474 | 모터 명령·피드백, 통신 및 정지 처리 |
-| Isaac Sim / Newton | 접촉 진단, 조작 개발, 심투리얼 평가 기반 |
-
-## 빠른 확인
-
-저장소 루트에서 실행한다. 아래 명령은 로컬 계약 검사이며 모터나 시뮬레이션을 실행하지 않는다.
+저장된 입력과 결과를 확인하려면 일반 Python으로 실행한다. GPU나 Isaac Sim을 시작하지 않는다.
 
 ```bash
-python3 -m venv .venv-host
-source .venv-host/bin/activate
-python -m pip install -r requirements/host.txt
-python tools/run/validate_protocol_manifest.py
-python tools/run/validate_camera_schedule.py
-python tools/run/validate_towel_contract.py
-python tools/run/validate_towel_schemas.py
+python -m pip install -r requirements-check.txt
+python tools/run_first_fold.py --check
 ```
 
-기하·상태·계획 계약의 단위 시험:
+전체 시뮬레이션을 다시 계산하려면 [실행 환경](docs/SIMULATION.md)을 준비하고 저장소 루트에서 실행한다.
 
 ```bash
-python -m pytest -c config/pytest.ini --rootdir=. -q \
-  tests/test_towel_geometry.py \
-  tests/test_towel_fold_path.py \
-  tests/test_towel_task_runtime.py \
-  tests/test_towel_task_planning.py \
-  tests/test_towel_task_replay.py \
-  tests/test_towel_schemas.py
+export ISAAC_PYTHON=/path/to/isaac-environment/bin/python
+"$ISAAC_PYTHON" -m pip install -r requirements-simulation.txt
+"$ISAAC_PYTHON" tools/run_first_fold.py --run
 ```
 
-ROS 2·MoveIt·STM32 빌드와 Isaac 실행 환경은 별도 설치가 필요하다. 일부 실험 입력과 녹화는 로컬 보관 자료로, 저장소 복제만으로 전체 접기를 재현할 수 있는 상태는 아니다. 공개 자료와 재현 범위는 [검증 근거](docs/EVIDENCE.md)를 따른다.
+Isaac Sim 창에서 보려면 마지막 명령에 `--gui`를 추가한다. 이 명령은 물리를 다시 계산한다. 저장 영상의 실시간 재생 기능은 포함하지 않는다. 새 결과는 `output/` 아래 별도 폴더에 저장되며 보존 결과를 덮어쓰지 않는다.
 
-## 저장소 구조
+## 구성
 
-| 경로 | 내용 |
-|---|---|
-| `config/` | 관절·운용 한계, 카메라, 수건 태스크 계약 |
-| `firmware/` | STM32 제어기 |
-| `hardware/` | 배선과 하드웨어 자료 |
-| `protocol/` | Pi–STM32 프로토콜 |
-| `ros2_ws/src/` | 카메라, 인식, 로봇 모델, MoveIt, 실행 브리지 |
-| `isaac_sim/` | 시뮬레이션 자산과 실행 안내 |
-| `tools/`, `tests/` | 계획·진단·검증 도구와 단위 시험 |
-| `docs/` | 진행 상황, 설계, 로드맵, 검증 기준 |
+- `tools/`: 당시 물리 실행기, 필요한 시뮬레이션 보조 코드, 단일 실행 진입점
+- `config/`: 물성·관절 제한·작업대·실행 설정과 입력 해시
+- `artifacts/`: 로봇 URDF, 패드 형상, 접근 및 접기 경로
+- `ros2_ws/src/so101_description/meshes/`: URDF가 참조하는 메시 자산만 보관
+- `results/first_fold/`: 성공 실행의 형상·접촉·정렬·놓기 결과와 검증 기록
 
-`single_arm_bridge`와 `stm32_g474_single_arm`은 기존 배포와의 호환성을 위해 유지한 이름이다. 실제 양팔 명령은 resident adapter를 통한다.
-
-## 문서
-
-- [현재 진행 상황](docs/CURRENT_STATUS.md) · [단계별 로드맵](docs/ROADMAP.md)
-- [시스템 구조](docs/ARCHITECTURE.md) · [수건 조작 설계와 품질 기준](docs/TOWEL_FOLDING.md)
-- [R2 검증 기준](docs/R2_SIM2REAL_CONTRACT.md) · [검증 근거와 재현 범위](docs/EVIDENCE.md)
-- [도구 사용](tools/README.md) · [시뮬레이션](isaac_sim/README.md) · [프로토콜](protocol/README.md)
-
-선행 펜 조작 데모는 [Bimanual-Pick-And-Place](https://github.com/Anhyeonseo/Bimanual-Pick-And-Place)에 별도로 보관한다.
-
-## License
-
-자체 작성 코드와 문서는 [Apache License 2.0](LICENSE)을 따른다. 로봇 모델, STM32 HAL·CMSIS·BSP 등은 [제3자 고지](docs/THIRD_PARTY_NOTICES.md)와 각 원본 라이선스를 따른다.
+실물 로봇 제어, 펌웨어, 통신 브릿지, 카메라 인식·학습 데이터는 이 저장소의 현재 버전에서 제외했다. 자산의 출처와 변경 사항은 [NOTICE](NOTICE.md)에 정리했다.
