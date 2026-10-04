@@ -2,9 +2,17 @@
 
 Isaac Sim과 Newton에서 두 대의 SO-101로 수건을 집고, 들어 올려 반으로 접은 뒤 내려놓는 시뮬레이션이다.
 
-![저장된 1차 접기 형상](docs/first_fold_result.png)
+## 1차 접기 시연
+
+2026년 9월 4일 개발 버전의 Isaac Sim 캡처다. 아래 수치 결과는 9월 6일 `fine_compact` 실행 기준이다.
+
+| 들어 올리기 | 반으로 접어 내려놓기 |
+| --- | --- |
+| ![수건 들어 올리기](docs/demo/first_fold_lift.png) | ![1차 접기 후 내려놓기](docs/demo/first_fold_placed.png) |
 
 ## 결과
+
+![저장된 1차 접기 형상](docs/first_fold_result.png)
 
 | 항목 | 값 |
 | --- | --- |
